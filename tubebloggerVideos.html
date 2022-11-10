@@ -1,0 +1,270 @@
+<meta property="og:image" content="https://2.bp.blogspot.com/-hxV6CQFS2xM/XX5c5LOBPHI/AAAAAAAAJRg/VKg7NGBvIRgxHIy76bwso3nWb5l-ueZogCLcBGAsYHQ/s320/tubeblogger-tv-thumbnail-youtube.jpg" />
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<div align="center" id="playerContainer" >
+<div align="center" id="playerBox">
+
+  <h1 align="left" class="post-title"  id="playerHeadline">
+  🔴 Now Playing: Choose a Playlist</h1>
+  <img src="https://2.bp.blogspot.com/-hxV6CQFS2xM/XX5c5LOBPHI/AAAAAAAAJRg/VKg7NGBvIRgxHIy76bwso3nWb5l-ueZogCLcBGAsYHQ/s320/tubeblogger-tv-thumbnail-youtube.jpg">
+</div></div><br />
+<div id="textBlock" align="center">
+<div id="textPost" align="left">
+Loading...
+</div>
+<div id="videoInfo"></div>
+<div align ="left" style="margin-left:2%;">
+<p>
+<a href="https://tubeblogger.blogspot.com/p/videos.html#XAbl4CqQTJg&PLSR0torEPW43eIVvSucKqVQ_7Ba8Wtk1b" id="news">📰 News & Current Events </a> - What's happening out there? 
+  <br />
+<a href="https://tubeblogger.blogspot.com/p/videos.html#games" >🎮 World of Games</a> - Video Game News & insights
+   <br />
+<a href="https://bit.ly/Weird-YouTube">🎭 WeirdTubes - Memes &amp; Comedy </a> - The Weird Side of YouTube again 👀<br />
+
+<br /> 
+  </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+
+    var textHeadline;
+    var textPost="<strong>Playlists:</strong>";
+    var thisVideo;
+    var thisPlaylist;
+    var src; 
+ 
+  //get the hashtag from address bar
+    switch (location.hash) {
+// DEFAULT PLAYLIST
+     case "":
+        textHeadline= '🔴 Tube Blogger TV';
+        src="//www.youtube.com/embed/videoseries?list=PLSR0torEPW42ftQ4zll19p0_jELPjrP9C&amp;enablejsapi=1&amp;autoplay=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
+        break; 
+
+// CUSTOM PLAYLISTS
+ 
+ case "#weirdtubes":
+  textHeadline= '🔴 That Weird Part Of YouTube Again...';
+  textPost= weirdtubesText;
+  src="//www.youtube.com/embed/videoseries?list=PLSR0torEPW40IbWJwu2N0dLpZK1KTivCP&amp;enablejsapi=1&amp;autoplay=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
+        thisCase= "#weirdtubes";
+  break; 
+
+  case "#games":
+        textHeadline='World of Games';
+        textPost=gamesText;
+          src="//www.youtube.com/embed/videoseries?list=PLuSz_OWigrye3OkiGTGmzGUtOg2_2mKZY&amp;enablejsapi=1&amp;autoplay=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
+        break;
+  
+  case '#news':
+    textHeadline="World News";
+    src="//www.youtube.com/embed/videoseries?list=PLSR0torEPW41TXd6cTyktHp3MzhOM06Mf&amp;enablejsapi=1&amp;autoplay=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
+     break;
+        
+   default:
+
+        //split the hashtags from playlist address
+var hash_parts = location.hash.split('&', 2); 
+
+if (hash_parts.length >1 &&  hash_parts[1]!="" ){
+
+thisVideo= hash_parts[0].slice(1);
+thisPlaylist= hash_parts[1].slice(0);
+
+        src="//www.youtube.com/embed/"+thisVideo+"?enablejsapi=1&playerapiid=ytplayer&version=3&list="+thisPlaylist+"&amp;autoplay=1&amp;autohide=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
+textHeadline= "🔴 TubeBlogger TV";       
+        break;
+}
+else if(hash_parts.length == 1){
+        thisVideo=  hash_parts[0].slice(1);
+        textHeadline= "🔴 TubeBlogger TV";
+        thisPlaylist="PLSR0torEPW42ftQ4zll19p0_jELPjrP9C";
+        src="//www.youtube.com/embed/"+thisVideo+"?enablejsapi=1&playerapiid=ytplayer&version=3&amp;autoplay=1&amp;autohide=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
+        break; 
+
+}
+    else{
+      textHeadline= "🔴 TubeBlogger TV";
+      thisVideo = "JoYTv4P8rns";
+      thisPlaylist="PLSR0torEPW42ftQ4zll19p0_jELPjrP9C";
+      src="//www.youtube.com/embed/"+thisVideo+"?enablejsapi=1&playerapiid=ytplayer&version=3&list="+thisPlaylist+"&amp;autoplay=1&amp;autohide=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
+    }    
+}
+ 
+  
+ var weirdtubesText='More from <a href=\'https://weirdtubes.tumblr.com\'>WeirdTubes</a>.<br/><a href=\'http://bit.ly/funny-sports\'>WeirdTubes Sports</a> <br/><a href=\'http://bit.ly/funny-music\'>WeirdMusic TV</a>';
+    var musicText="<b>More Music Playlists:</b><br /><a href='https://tubeblogger.blogspot.com/p/videos.html#dancemusic'>Dance Music Hotlist</a> <br /><a href=\'http://bit.ly/Oldies-Music\'>Oldies and \'fallout\' music</a><br/><a href=\'http://bit.ly/rap-mixtape\'>HipHop Mixtape TV</a> <br/><a href=\'http://bit.ly/games-music\'>Epic Video Game Music</a>.<br/><a href=\'#chillout\'>Chillout Music</a> - Relax & Study<br/><a href=\'http://bit.ly/funny-music\'>WeirdMusic TV</a>";
+    var vrText = "<p> In your Phone or VR Viewer <a href=\"https://www.youtube.com/playlist?list=PLuSz_OWigryc1nBuVXcG-oK0yrkws5Jsr\"> Open In YouTube App</a> <br /><b>More 360˚ Video Playlists:</b><br /> <a href=\"http://bit.ly/vr-animals\">360˚ Animal Videos.</a><br /> <a href=\"http://bit.ly/vr-scary\">Scary Videos 360˚</a> - Watch if you dare!<br /> <a href=\"http://bit.ly/vr-extreme\">Extreme Sports & Rides Videos 360˚</a></p> ";
+ var gamesText ="More Playlists:<br /><a href=\'http://bit.ly/games-music\'>🎼 Best Video Game Music</a>.<br/> <a href='https://tubeblogger.blogspot.com/p/videos.html#gamecomedy'>🎬 Videogame Comedy & Fan Flicks.</a>";
+  var gameMusic = "<a href='https://tubeblogger.blogspot.com/p/videos.html#gametechno'>🤖 Video Game Techno Music</a><br /><a href='https://tubeblogger.blogspot.com/p/videos.html#arcade'>Arcade Mixtape 💯<a/> - Even more techno music<br /><a href='https://tubeblogger.blogspot.com/p/videos.html#dungeonmusic'>💀 Dungeon Music</a> - Relaxing for some";
+  var docuText="";
+
+
+prepareFrame();
+preparePost();
+  
+var thisLink="https://tubeblogger.blogspot.com/p/videos.html#"+thisVideo;
+
+    
+function preparePost(){
+    document.getElementById("playerHeadline").innerHTML = textHeadline;
+ document.getElementById("textPost").innerHTML = textPost;    
+document.title=textHeadline;
+
+}
+
+function prepareFrame() {
+ifrm = document.createElement("IFRAME");
+ifrm.setAttribute('id', 'ytIfrm'); 
+ifrm.setAttribute("src", src);
+ifrm.style.width = 100+'%';
+ifrm.style.height = 100+"%";
+ifrm.style.border = 'none';
+ifrm.setAttribute("allowfullscreen",true);
+ifrm.setAttribute("allow","accelerometer; gyroscope")
+//ifrm.addEventListener("onPlayerReady", onPlayerReady );
+ifrm.addEventListener("onPlayerStateChange",onPlayerStateChange );
+//ifrm.addEventListener("onStateChange","onPlayerStateChange","onPlayerReady" );
+plBox = document.getElementById("playerBox");
+plBox.replaceChild(ifrm,plBox.children[1]);
+
+//var frameWidth = document.getElementById("playerBox").offsetWidth;
+//var newHeight = frameWidth*0.562;
+//document.getElementById("playerBox").style.height = newHeight+"px";
+    //player loaded
+document.getElementById('playerBox').scrollIntoView();
+
+
+}
+
+
+function reloadTheFrame(){
+window.location.reload();
+ document.getElementById('playerBox').scrollIntoView();
+}
+
+
+window.onhashchange = function() {
+ url = location.href;
+    window.location.reload();
+ document.getElementById('playerBox').scrollIntoView();
+
+    }
+
+  
+  //someone can figure this out?
+ytPlayer = document.getElementById('ytIfrm');
+ytPlayer.addEventListener("onPlayerReady", onPlayerReady );
+ytPlayer.addEventListener("onStateChange",onPlayerReady );
+ytPlayer.addEventListener("onPlayerStateChange ",onPlayerStateChange );
+
+var onPlayerStateChange = function(event) {
+
+    // get video Id from event, not player.
+    videoId = typeof event.target.getVideoData().video_id !== 'undefined' ? event.target.getVideoData().video_id : 'unknown';
+    videoTitle=typeof event.target.getVideoData().title!== 'undefined' ? event.target.getVideoData().title: 'unknown';
+    videoAuthor=typeof event.target.getVideoData().author!== 'undefined' ? event.target.getVideoData().author: 'unknown';
+    document.getElementById('videoInfo').innerHTML ="watching "+  videoTitle ;
+};
+
+
+function onPlayerReady(event) {
+ //data=event.target.getVideoData() ;
+ videoTitle= event.target.getVideoData().title;
+document.getElementById('videoNameHolder').innerHTML ="watching "+  videoTitle ;
+console.log(videoTitle);
+  }
+/*
+function whatLink() {
+    var thisYtVideo = ifrm.getVideoUrl();
+    document.getElementById('ids').innerHTML= "thisYtLink "+thisYtVideo;
+}
+function shuffle(){
+    ifrm.setShuffle(shufflePlaylist:true);
+}
+*/
+  
+ 
+ 
+</script>  
+
+<!-- Static page styling Start-->
+<style>
+
+
+#playerBox{
+  padding-bottom: 56.25%;
+position: relative;
+ 
+}
+  
+  #playerBox iframe{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+//padding-top: 56.25%;
+
+#textBlock{
+position:relative;
+top:106%;
+}
+
+#playerBox h1{
+ margin:0px;
+ margin-left:2%;
+ margin-block-start: 7px;
+ margin-block-end: 3px;
+}
+#playerHeadline{
+max-width:100%;
+white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+ p.date{
+font-size:small;
+  display:inline;
+
+}
+    
+ p.feedItemAuthor{
+font-size:small;
+  display:inline;
+   margin:0 5px 0 5px;
+}
+  
+/* For Blogger */
+.post-body{
+    font-size: 20px;
+}
+/* For Blogger */
+#HTML2, .post-header, .post-title.entry-title, .post-footer
+ { display:none !important;}
+/* For Blogger. removing the annoying little line dash */
+body.item-view .post-body-container:before
+ { display:none !important;}
+ /* For Blogger */
+.main-inner .columns {
+ width: 100%;  
+ height:100%; 
+ padding-left:0 !important;
+ padding-right:0 !important;
+}
+.yThumb{
+  width:240px;
+  height:auto;
+}
+</style>
+<!-- Static page styling End -->
+<meta name="twitter:card" content="player">
+<meta name="twitter:player" content="https://www.youtube.com/embed/XAbl4CqQTJg?list=PLSR0torEPW42ftQ4zll19p0_jELPjrP9C&amp;enablejsapi=1&amp;autoplay=1&amp;theme=light&amp;modestbranding=1">
+<meta name="twitter:player:width" content="435">
+<meta name="twitter:player:height" content="251">
+<meta name="twitter:image" content="https://2.bp.blogspot.com/-hxV6CQFS2xM/XX5c5LOBPHI/AAAAAAAAJRg/VKg7NGBvIRgxHIy76bwso3nWb5l-ueZogCLcBGAsYHQ/s320/tubeblogger-tv-thumbnail-youtube.jpg">
+
