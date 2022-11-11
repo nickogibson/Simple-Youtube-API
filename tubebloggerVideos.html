@@ -62,16 +62,16 @@
         
    default:
 
-        //split the hashtags from playlist address
+        //get the ids from address bar
 var hash_parts = location.hash.split('&', 2); 
 
 if (hash_parts.length >1 &&  hash_parts[1]!="" ){
 
-thisVideo= hash_parts[0].slice(1);
-thisPlaylist= hash_parts[1].slice(0);
+	thisVideo= hash_parts[0].slice(1);
+	thisPlaylist= hash_parts[1].slice(0);
 
-        src="//www.youtube.com/embed/"+thisVideo+"?enablejsapi=1&playerapiid=ytplayer&version=3&list="+thisPlaylist+"&amp;autoplay=1&amp;autohide=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
-textHeadline= "🔴 TubeBlogger TV";       
+	src="//www.youtube.com/embed/"+thisVideo+"?enablejsapi=1&playerapiid=ytplayer&version=3&list="+thisPlaylist+"&amp;autoplay=1&amp;autohide=1&amp;theme=light&amp;modestbranding=1&amp;rel=0";
+	textHeadline= "🔴 TubeBlogger TV";       
         break;
 }
 else if(hash_parts.length == 1){
@@ -91,17 +91,17 @@ else if(hash_parts.length == 1){
 }
  
   
-	var weirdtubesText='More from <a href=\'https://weirdtubes.tumblr.com\'>WeirdTubes</a>.<br/><a href=\'http://bit.ly/funny-sports\'>WeirdTubes Sports</a> <br/><a href=\'http://bit.ly/funny-music\'>WeirdMusic TV</a>';
-	var musicText="<b>More Music Playlists:</b><br /><a href='https://tubeblogger.blogspot.com/p/videos.html#dancemusic'>Dance Music Hotlist</a> <br /><a href=\'http://bit.ly/Oldies-Music\'>Oldies and \'fallout\' music</a><br/><a href=\'http://bit.ly/rap-mixtape\'>HipHop Mixtape TV</a> <br/><a href=\'http://bit.ly/games-music\'>Epic Video Game Music</a>.<br/><a href=\'#chillout\'>Chillout Music</a> - Relax & Study<br/><a href=\'http://bit.ly/funny-music\'>WeirdMusic TV</a>";
-    var vrText = "<p> In your Phone or VR Viewer <a href=\"https://www.youtube.com/playlist?list=PLuSz_OWigryc1nBuVXcG-oK0yrkws5Jsr\"> Open In YouTube App</a> <br /><b>More 360˚ Video Playlists:</b><br /> <a href=\"http://bit.ly/vr-animals\">360˚ Animal Videos.</a><br /> <a href=\"http://bit.ly/vr-scary\">Scary Videos 360˚</a> - Watch if you dare!<br /> <a href=\"http://bit.ly/vr-extreme\">Extreme Sports & Rides Videos 360˚</a></p> ";
-	var gamesText ="More Playlists:<br /><a href=\'http://bit.ly/games-music\'>🎼 Best Video Game Music</a>.<br/> <a href='https://tubeblogger.blogspot.com/p/videos.html#gamecomedy'>🎬 Videogame Comedy & Fan Flicks.</a>";
-	var gameMusic = "<a href='https://tubeblogger.blogspot.com/p/videos.html#gametechno'>🤖 Video Game Techno Music</a><br /><a href='https://tubeblogger.blogspot.com/p/videos.html#arcade'>Arcade Mixtape 💯<a/> - Even more techno music<br /><a href='https://tubeblogger.blogspot.com/p/videos.html#dungeonmusic'>💀 Dungeon Music</a> - Relaxing for some";
-	var docuText="";
+var weirdtubesText='More from <a href=\'https://weirdtubes.tumblr.com\'>WeirdTubes</a>.<br/><a href=\'http://bit.ly/funny-sports\'>WeirdTubes Sports</a> <br/><a href=\'http://bit.ly/funny-music\'>WeirdMusic TV</a>';
+var musicText="<b>More Music Playlists:</b><br /><a href='https://tubeblogger.blogspot.com/p/videos.html#dancemusic'>Dance Music Hotlist</a> <br /><a href=\'http://bit.ly/Oldies-Music\'>Oldies and \'fallout\' music</a><br/><a href=\'http://bit.ly/rap-mixtape\'>HipHop Mixtape TV</a> <br/><a href=\'http://bit.ly/games-music\'>Epic Video Game Music</a>.<br/><a href=\'#chillout\'>Chillout Music</a> - Relax & Study<br/><a href=\'http://bit.ly/funny-music\'>WeirdMusic TV</a>";
+var vrText = "<p> In your Phone or VR Viewer <a href=\"https://www.youtube.com/playlist?list=PLuSz_OWigryc1nBuVXcG-oK0yrkws5Jsr\"> Open In YouTube App</a> <br /><b>More 360˚ Video Playlists:</b><br /> <a href=\"http://bit.ly/vr-animals\">360˚ Animal Videos.</a><br /> <a href=\"http://bit.ly/vr-scary\">Scary Videos 360˚</a> - Watch if you dare!<br /> <a href=\"http://bit.ly/vr-extreme\">Extreme Sports & Rides Videos 360˚</a></p> ";
+var gamesText ="More Playlists:<br /><a href=\'http://bit.ly/games-music\'>🎼 Best Video Game Music</a>.<br/> <a href='https://tubeblogger.blogspot.com/p/videos.html#gamecomedy'>🎬 Videogame Comedy & Fan Flicks.</a>";
+var gameMusic = "<a href='https://tubeblogger.blogspot.com/p/videos.html#gametechno'>🤖 Video Game Techno Music</a><br /><a href='https://tubeblogger.blogspot.com/p/videos.html#arcade'>Arcade Mixtape 💯<a/> - Even more techno music<br /><a href='https://tubeblogger.blogspot.com/p/videos.html#dungeonmusic'>💀 Dungeon Music</a> - Relaxing for some";
+var docuText="";
 
-	prepareFrame();
-	preparePost();
-  
-	var thisLink="https://tubeblogger.blogspot.com/p/videos.html#"+thisVideo;
+prepareFrame();
+preparePost();
+
+var thisLink="https://tubeblogger.blogspot.com/p/videos.html#"+thisVideo;
 
     
 function preparePost(){
@@ -112,27 +112,25 @@ document.title=textHeadline;
 }
 
 function prepareFrame() {
-ifrm = document.createElement("IFRAME");
-ifrm.setAttribute('id', 'ytIfrm'); 
-ifrm.setAttribute("src", src);
-ifrm.style.width = 100+'%';
-ifrm.style.height = 100+"%";
-ifrm.style.border = 'none';
-ifrm.setAttribute("allowfullscreen",true);
-ifrm.setAttribute("allow","accelerometer; gyroscope")
-//ifrm.addEventListener("onPlayerReady", onPlayerReady );
-ifrm.addEventListener("onPlayerStateChange",onPlayerStateChange );
-//ifrm.addEventListener("onStateChange","onPlayerStateChange","onPlayerReady" );
-plBox = document.getElementById("playerBox");
-plBox.replaceChild(ifrm,plBox.children[1]);
+	ifrm = document.createElement("IFRAME");
+	ifrm.setAttribute('id', 'ytIfrm'); 
+	ifrm.setAttribute("src", src);
+	ifrm.style.width = 100+'%';
+	ifrm.style.height = 100+"%";
+	ifrm.style.border = 'none';
+	ifrm.setAttribute("allowfullscreen",true);
+	ifrm.setAttribute("allow","accelerometer; gyroscope")
+	//ifrm.addEventListener("onPlayerReady", onPlayerReady );
+	ifrm.addEventListener("onPlayerStateChange",onPlayerStateChange );
+	//ifrm.addEventListener("onStateChange","onPlayerStateChange","onPlayerReady" );
+	plBox = document.getElementById("playerBox");
+	plBox.replaceChild(ifrm,plBox.children[1]);
 
-//var frameWidth = document.getElementById("playerBox").offsetWidth;
-//var newHeight = frameWidth*0.562;
-//document.getElementById("playerBox").style.height = newHeight+"px";
-    //player loaded
-document.getElementById('playerBox').scrollIntoView();
-
-
+	//var frameWidth = document.getElementById("playerBox").offsetWidth;
+	//var newHeight = frameWidth*0.562;
+	//document.getElementById("playerBox").style.height = newHeight+"px";
+	    //player loaded
+	document.getElementById('playerBox').scrollIntoView();
 }
 
 
