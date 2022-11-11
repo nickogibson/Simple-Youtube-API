@@ -139,7 +139,12 @@ window.location.reload();
  document.getElementById('playerBox').scrollIntoView();
 }
 
+window.onhashchange = function() {
+ url = location.href;
+    window.location.reload();
+ document.getElementById('playerBox').scrollIntoView();
 
+    }
 function onPlayerReady(event) {
  //data=event.target.getVideoData() ;
  videoTitle= event.target.getVideoData().title;
