@@ -1,11 +1,11 @@
 # Simple-Youtube-API
 [TubeBlogger's Video Page](https://tubeblogger.blogspot.com/p/videos.html). 
-Just an easy way to embed playlists, and play videos with location.hash 
+Just an easy way to make a link to a video or playlist on your site. Without having to update the website html with embeds. 
 
 page.com#videoid
 
 or
 
-tubeblogger.com#videoId&playlistid
+page.com#videoId&playlistid
 
-To easily make a link to a video or playlist without having to go and update the website to add embeds, or update a playlist. 
+
